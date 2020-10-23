@@ -1,0 +1,2 @@
+include ':app', ':sgetter'
+rootProject.name = "SourceGetter"
