@@ -53,7 +53,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun btn_bitly(view: View){
-        goPlayer("asfasdasdadasd")
+        goPlayer("")
+    }
+    fun btn_bittube(view: View){
+        goPlayer("https://bittube.video/videos/embed/8e02be96-fa09-4309-a469-3c74c945182b")
     }
     fun btn_blogger(view: View){
         goPlayer("")

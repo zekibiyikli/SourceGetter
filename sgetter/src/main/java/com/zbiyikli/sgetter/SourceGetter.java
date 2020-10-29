@@ -22,6 +22,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.zbiyikli.sgetter.Domains.Bitly;
+import com.zbiyikli.sgetter.Domains.Bittube;
 import com.zbiyikli.sgetter.Domains.Blogger;
 import com.zbiyikli.sgetter.Domains.ClipWatching;
 import com.zbiyikli.sgetter.Domains.CloudVideo;
@@ -254,6 +255,7 @@ public class SourceGetter {
         boolean isDailyMotion=false;
         boolean popcornflix=false;
         boolean vlare=false;
+        boolean bittube=false;
 
         if (check(openload, url)) {
             run = true;
@@ -556,6 +558,9 @@ public class SourceGetter {
         }else if (url.contains("vlare")){
             vlare=true;
             run=true;
+        }else if(url.contains("bittube")){
+            bittube=true;
+            run=true;
         }
 
         if (run) {
@@ -704,11 +709,15 @@ public class SourceGetter {
                 Popcornflix(url);
             }else if(vlare){
                 Vlare(url);
+            }else if(bittube){
+                Bittube(url);
             }
             
         }
         return run;
     }
+
+    private void Bittube(String url){new Bittube().execute(url);}
 
     private void Vlare(String url){new Vlare().fetch(url,onComplete);}
 
