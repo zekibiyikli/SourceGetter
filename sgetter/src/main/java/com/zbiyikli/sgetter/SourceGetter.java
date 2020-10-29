@@ -39,6 +39,7 @@ import com.zbiyikli.sgetter.Domains.MyMailRu;
 import com.zbiyikli.sgetter.Domains.Mycima;
 import com.zbiyikli.sgetter.Domains.Okru;
 import com.zbiyikli.sgetter.Domains.Openplay;
+import com.zbiyikli.sgetter.Domains.PopcornFlix;
 import com.zbiyikli.sgetter.Domains.ProStream;
 import com.zbiyikli.sgetter.Domains.Puhutv;
 import com.zbiyikli.sgetter.Domains.Rapidrame;
@@ -250,6 +251,7 @@ public class SourceGetter {
         boolean isSendVid = false;
         boolean isFileRio=false;
         boolean isDailyMotion=false;
+        boolean popcornflix=false;
 
         if (check(openload, url)) {
             run = true;
@@ -546,6 +548,9 @@ public class SourceGetter {
         else if(url.contains("tubitv.com")){
             tubitv=true;
             run=true;
+        }else if(url.contains("popcornflix")){
+            popcornflix=true;
+            run=true;
         }
 
         if (run) {
@@ -690,12 +695,15 @@ public class SourceGetter {
                 tubiTv(url);
             }else if(vidoza2){
                 Vidoza2(url);
+            }else if (popcornflix){
+                Popcornflix(url);
             }
             
         }
         return run;
     }
 
+    private void Popcornflix(String url){new PopcornFlix().execute(url);}
 
     private void Vidoza2(String url){new Vidoza2().execute(url);}
 

@@ -24,7 +24,8 @@ Brings resources from Video Sites
  - **Mycima**  
  - **Mymailru**  
  - **Okru**  
- - **Openload**  
+ - **Openload**
+ - **Popcornflix**
  - **Puhutv**  
  - **Rapidrame**
  - **Rapidvideo**   

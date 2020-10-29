@@ -154,6 +154,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Popcornflix"
+                    android:onClick="btn_popcornflix"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="Puhutv"
                     android:onClick="btn_puhutv"/>
                 <Button

@@ -109,6 +109,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_okru(view: View){
         goPlayer("https://m.ok.ru/video/2192920939091")
     }
+    fun btn_popcornflix(view: View){
+        goPlayer("https://www.popcornflix.com/watch/channel/new-releases/movie/30-w2baat4ywdv1-grand-isle")
+    }
     fun btn_puhutv(view: View){
         goPlayer("https://puhutv.com/insaat-izle-22270")
     }
