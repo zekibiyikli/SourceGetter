@@ -60,5 +60,6 @@ Brings resources from Video Sites
  - **Youtube**  
  - **Watchvideo** 
 
+**This project has been developed by making improvements on the "https://github.com/KhunHtetzNaing/xGetter" project.**
 
 #Zeki Biyikli #SGetter #2020
