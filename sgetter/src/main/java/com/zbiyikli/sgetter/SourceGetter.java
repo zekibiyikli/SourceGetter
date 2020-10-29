@@ -48,6 +48,7 @@ import com.zbiyikli.sgetter.Domains.Shahd;
 import com.zbiyikli.sgetter.Domains.Shahidlive;
 import com.zbiyikli.sgetter.Domains.SpeedVideo;
 import com.zbiyikli.sgetter.Domains.Streamhoe;
+import com.zbiyikli.sgetter.Domains.Streamtape;
 import com.zbiyikli.sgetter.Domains.Streamwire;
 import com.zbiyikli.sgetter.Domains.Streamz;
 import com.zbiyikli.sgetter.Domains.SuperVideo;
@@ -256,6 +257,7 @@ public class SourceGetter {
         boolean popcornflix=false;
         boolean vlare=false;
         boolean bittube=false;
+        boolean streamtape=false;
 
         if (check(openload, url)) {
             run = true;
@@ -263,6 +265,10 @@ public class SourceGetter {
         }
         else if(url.contains("filmmodu")){
             filmmodu=true;
+            run=true;
+        }
+        else if(url.contains("streamtape")){
+            streamtape=true;
             run=true;
         }
         else if(url.contains(".m3u8") || (url.contains(".mp4")) || (url.contains(".mkv"))){
@@ -711,11 +717,15 @@ public class SourceGetter {
                 Vlare(url);
             }else if(bittube){
                 Bittube(url);
+            }else if(streamtape){
+                Streamtape(url);
             }
             
         }
         return run;
     }
+
+    private void Streamtape(String url){new Streamtape().execute(url);}
 
     private void Bittube(String url){new Bittube().execute(url);}
 

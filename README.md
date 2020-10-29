@@ -2,7 +2,8 @@
 
 Brings resources from Video Sites
 
- - **Bitly**  
+ - **Bitly**
+ - **Bittube**
  - **Blogger**  
  - **Clipwatching**  
  - **Cloudb**  
@@ -33,7 +34,8 @@ Brings resources from Video Sites
  - **Shahd**  
  - **Shahidlive**  
  - **Speedvideo**  
- - **Streamhoe**  
+ - **Streamhoe**
+ - **Streamtape**
  - **Streamvid**  
  - **Streamwire**  
  - **Supervideo**  

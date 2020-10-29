@@ -133,6 +133,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_streamhoe(view: View){
         goPlayer("https://streamhoe.online/v/m0z8ra54zrpk28z")
     }
+    fun btn_streamtape(view: View){
+        goPlayer("https://streamtape.net/v/GbmzAG9ZaVHlzK/%5BAsahi%5D_Fugou_Keiji_-_Balance_-_UNLIMITED_-_01_%5B1080p%5D.mp4")
+    }
     fun btn_streamvid(view: View){
         goPlayer("https://streamvid.co/player/nJa8zwoJB73cSLV/")
     }
