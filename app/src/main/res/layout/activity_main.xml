@@ -331,6 +331,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Vlare"
+                    android:onClick="btn_vlare"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="Voidboost"
                     android:onClick="btn_voidboost"/>
                 <Button

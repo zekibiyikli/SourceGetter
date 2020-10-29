@@ -193,6 +193,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_vidtobo(view: View){
         goPlayer("https://vidtobo.com/qhcm9gipwgbl.html")
     }
+    fun btn_vlare(view: View){
+        goPlayer("https://vlare.tv/v/V0egtPxz")
+    }
     fun btn_voidboost(view: View){
         goPlayer("https://voidboost.net/embed/1261612")
     }

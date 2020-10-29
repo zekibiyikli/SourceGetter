@@ -68,6 +68,7 @@ import com.zbiyikli.sgetter.Domains.Vidia;
 import com.zbiyikli.sgetter.Domains.Vidlox;
 import com.zbiyikli.sgetter.Domains.Vidoza;
 import com.zbiyikli.sgetter.Domains.Vidoza2;
+import com.zbiyikli.sgetter.Domains.Vlare;
 import com.zbiyikli.sgetter.Domains.VoidBoost;
 import com.zbiyikli.sgetter.Domains.WatchVideo;
 import com.zbiyikli.sgetter.Domains.tubiTv;
@@ -252,6 +253,7 @@ public class SourceGetter {
         boolean isFileRio=false;
         boolean isDailyMotion=false;
         boolean popcornflix=false;
+        boolean vlare=false;
 
         if (check(openload, url)) {
             run = true;
@@ -551,6 +553,9 @@ public class SourceGetter {
         }else if(url.contains("popcornflix")){
             popcornflix=true;
             run=true;
+        }else if (url.contains("vlare")){
+            vlare=true;
+            run=true;
         }
 
         if (run) {
@@ -697,11 +702,15 @@ public class SourceGetter {
                 Vidoza2(url);
             }else if (popcornflix){
                 Popcornflix(url);
+            }else if(vlare){
+                Vlare(url);
             }
             
         }
         return run;
     }
+
+    private void Vlare(String url){new Vlare().fetch(url,onComplete);}
 
     private void Popcornflix(String url){new PopcornFlix().execute(url);}
 
