@@ -239,7 +239,7 @@ class MainActivity : AppCompatActivity() {
         goPlayer("")
     }
     fun btn_mediafire(view:View){
-        goPlayer("")
+        goPlayer("http://www.mediafire.com/file/i8sjfas751yknlm/PaO_Ma_Lay_%255BOfficial_MV%255D_-_%25281080P_HD%2529.mp4/file")
     }
     fun btn_youtube(view:View){
         goPlayer("https://www.youtube.com/watch?v=LXb3EKWsInQ")

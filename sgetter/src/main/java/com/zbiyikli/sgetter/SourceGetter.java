@@ -37,6 +37,7 @@ import com.zbiyikli.sgetter.Domains.Fansubs;
 import com.zbiyikli.sgetter.Domains.GCloud;
 import com.zbiyikli.sgetter.Domains.Imdb;
 import com.zbiyikli.sgetter.Domains.M3u8;
+import com.zbiyikli.sgetter.Domains.Mediafire;
 import com.zbiyikli.sgetter.Domains.MixDrop;
 import com.zbiyikli.sgetter.Domains.Movcloud;
 import com.zbiyikli.sgetter.Domains.MyMailRu;
@@ -268,6 +269,7 @@ public class SourceGetter {
         boolean filerio=false;
         boolean fansubs=false;
         boolean solidfile=false;
+        boolean mediafire=false;
 
         if (check(openload, url)) {
             run = true;
@@ -302,13 +304,6 @@ public class SourceGetter {
         else if (check_fb_video(url)) {
             run = true;
             fb = true;
-        }
-        else if (check(mediafire, url)) {
-            run = true;
-            mfire = true;
-            if (!url.startsWith("https")){
-                url = url.replace("http","https");
-            }
         }
         else if (check(vk,url)){
             run = true;
@@ -570,6 +565,9 @@ public class SourceGetter {
         }else if(url.contains("solidfile")){
             solidfile=true;
             run=true;
+        }else if(url.contains("mediafire")){
+            mediafire=true;
+            run=true;
         }
 
         if (run) {
@@ -732,11 +730,15 @@ public class SourceGetter {
                 Fansubs(url);
             }else if(solidfile){
                 Solidfile(url);
+            }else if(mediafire){
+                Mediafire(url);
             }
             
         }
         return run;
     }
+
+    private void Mediafire(String url){new Mediafire().execute(url);}
 
     private void Solidfile(String url){new Solidfile().execute(url);}
 
