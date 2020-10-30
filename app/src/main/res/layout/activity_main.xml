@@ -352,6 +352,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Vudeo"
+                    android:onClick="btn_vudeo"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="Watchvideo"
                     android:onClick="btn_watchvideo"/>
                 <Button

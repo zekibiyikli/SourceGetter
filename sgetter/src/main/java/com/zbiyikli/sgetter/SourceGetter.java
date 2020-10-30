@@ -72,6 +72,7 @@ import com.zbiyikli.sgetter.Domains.Vidoza;
 import com.zbiyikli.sgetter.Domains.Vidoza2;
 import com.zbiyikli.sgetter.Domains.Vlare;
 import com.zbiyikli.sgetter.Domains.VoidBoost;
+import com.zbiyikli.sgetter.Domains.Vudeo;
 import com.zbiyikli.sgetter.Domains.WatchVideo;
 import com.zbiyikli.sgetter.Domains.tubiTv;
 import com.zbiyikli.sgetter.Domains.vFilmesOnline;
@@ -258,6 +259,7 @@ public class SourceGetter {
         boolean vlare=false;
         boolean bittube=false;
         boolean streamtape=false;
+        boolean vudeo=false;
 
         if (check(openload, url)) {
             run = true;
@@ -567,6 +569,9 @@ public class SourceGetter {
         }else if(url.contains("bittube")){
             bittube=true;
             run=true;
+        }else if(url.contains("vudeo")){
+            vudeo=true;
+            run=true;
         }
 
         if (run) {
@@ -719,11 +724,15 @@ public class SourceGetter {
                 Bittube(url);
             }else if(streamtape){
                 Streamtape(url);
+            }else if(vudeo){
+                Vudeo(url);
             }
             
         }
         return run;
     }
+
+    private void Vudeo(String url){new Vudeo().execute(url);}
 
     private void Streamtape(String url){new Streamtape().execute(url);}
 

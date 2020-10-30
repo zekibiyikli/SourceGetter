@@ -205,6 +205,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_voidboost(view: View){
         goPlayer("https://voidboost.net/embed/1261612")
     }
+    fun btn_vudeo(view: View){
+        goPlayer("https://vudeo.net/azhfxfpzq6yq.html")
+    }
     fun btn_watchvideo(view: View){
         goPlayer("https://watchvideo.us/306wmjp8spay.html")
     }

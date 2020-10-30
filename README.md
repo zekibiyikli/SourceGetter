@@ -58,7 +58,8 @@ Brings resources from Video Sites
  - **Vidshare**  
  - **Vidtobo** 
  - **Vk**   
- - **Voidboost**  
+ - **Voidboost**
+ - **Vudeo**
  - **Youtube**  
  - **Watchvideo** 
 
