@@ -136,6 +136,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_shahidlive(view: View){
         goPlayer("https://shahidlive.co/Play/1177516-728-408.9887640449438")
     }
+    fun btn_solidfile(view: View){
+        goPlayer("http://www.solidfiles.com/v/PAwwxGvgqd5VX")
+    }
     fun btn_speedvideo(view: View){
         goPlayer("")
     }

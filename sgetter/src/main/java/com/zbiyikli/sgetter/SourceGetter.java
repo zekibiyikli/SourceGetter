@@ -49,6 +49,7 @@ import com.zbiyikli.sgetter.Domains.Puhutv;
 import com.zbiyikli.sgetter.Domains.Rapidrame;
 import com.zbiyikli.sgetter.Domains.Shahd;
 import com.zbiyikli.sgetter.Domains.Shahidlive;
+import com.zbiyikli.sgetter.Domains.Solidfile;
 import com.zbiyikli.sgetter.Domains.SpeedVideo;
 import com.zbiyikli.sgetter.Domains.Streamhoe;
 import com.zbiyikli.sgetter.Domains.Streamtape;
@@ -266,6 +267,7 @@ public class SourceGetter {
         boolean cocoscope=false;
         boolean filerio=false;
         boolean fansubs=false;
+        boolean solidfile=false;
 
         if (check(openload, url)) {
             run = true;
@@ -565,6 +567,9 @@ public class SourceGetter {
         }else if(url.contains("fansubs")){
             fansubs=true;
             run=true;
+        }else if(url.contains("solidfile")){
+            solidfile=true;
+            run=true;
         }
 
         if (run) {
@@ -725,11 +730,15 @@ public class SourceGetter {
                 Filerio(url);
             }else if(fansubs){
                 Fansubs(url);
+            }else if(solidfile){
+                Solidfile(url);
             }
             
         }
         return run;
     }
+
+    private void Solidfile(String url){new Solidfile().execute(url);}
 
     private void Fansubs(String url){new Fansubs().execute(url);}
 

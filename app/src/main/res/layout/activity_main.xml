@@ -239,6 +239,12 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Solidfile"
+                    android:onClick="btn_solidfile"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="Streamhoe"
                     android:onClick="btn_streamhoe"/>
                 <Button

@@ -33,7 +33,8 @@ Brings resources from Video Sites
  - **Puhutv**  
  - **Rapidrame**
  - **Rapidvideo**   
- - **Sendvid**   
+ - **Sendvid**
+ - **Solidfile**
  - **Shahd**  
  - **Shahidlive**  
  - **Speedvideo**  
