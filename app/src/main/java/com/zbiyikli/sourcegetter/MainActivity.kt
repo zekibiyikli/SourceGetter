@@ -85,6 +85,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_feelem(view: View){
         goPlayer("https://feelem.org/95240")
     }
+    fun btn_filerio(view: View){
+        goPlayer("https://filerio.in/9sufkwnytiwp")
+    }
     fun btn_filmmodu(view: View){
         goPlayer("https://www.filmmodu.org/hvitur-hvitur-dagur-altyazili-izle")
     }

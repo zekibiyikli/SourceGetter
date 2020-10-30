@@ -31,6 +31,7 @@ import com.zbiyikli.sgetter.Domains.Cocoscope;
 import com.zbiyikli.sgetter.Domains.ComedyShow;
 import com.zbiyikli.sgetter.Domains.Delivembed;
 import com.zbiyikli.sgetter.Domains.Feelem;
+import com.zbiyikli.sgetter.Domains.Filerio;
 import com.zbiyikli.sgetter.Domains.FilmModu;
 import com.zbiyikli.sgetter.Domains.GCloud;
 import com.zbiyikli.sgetter.Domains.Imdb;
@@ -262,6 +263,7 @@ public class SourceGetter {
         boolean streamtape=false;
         boolean vudeo=false;
         boolean cocoscope=false;
+        boolean filerio=false;
 
         if (check(openload, url)) {
             run = true;
@@ -338,24 +340,6 @@ public class SourceGetter {
         else if (check(fansubs,url)){
             isFanSubs = true;
             run = true;
-        }
-        else if (check(filerio,url)){
-            isFileRio = true;
-            run = true;
-            if (!url.contains("embed-")) {
-                final String regex = "in\\/([^']*)";
-                final Pattern pattern = Pattern.compile(regex);
-                final Matcher matcher = pattern.matcher(url);
-                if (matcher.find()) {
-                    String id = matcher.group(1);
-                    if (id.contains("/")) {
-                        id = id.substring(0, id.lastIndexOf("/"));
-                    }
-                    url = "https://filerio.in/embed-" + id + ".html";
-                } else {
-                    run = false;
-                }
-            }
         }
         else if (url.contains("dailymotion")){
             isDailyMotion = true;
@@ -577,6 +561,9 @@ public class SourceGetter {
         }else if(url.contains("cocoscope")){
             cocoscope=true;
             run=true;
+        }else if(url.contains("filerio")){
+            filerio=true;
+            run=true;
         }
 
         if (run) {
@@ -733,11 +720,15 @@ public class SourceGetter {
                 Vudeo(url);
             }else if(cocoscope){
                 Cocoscope(url);
+            }else if(filerio){
+                Filerio(url);
             }
             
         }
         return run;
     }
+
+    private void Filerio(String url){new Filerio().execute(url);}
 
     private void Cocoscope(String url){new Cocoscope().execute(url);}
 

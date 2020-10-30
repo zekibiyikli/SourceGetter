@@ -119,6 +119,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Filerio"
+                    android:onClick="btn_filerio"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="GCloud"
                     android:onClick="btn_gcloud"/>
                 <Button

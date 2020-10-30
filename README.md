@@ -13,7 +13,8 @@ Brings resources from Video Sites
  - **Dailymotion**  
  - **Delivembed**  
  - **Feelem**  
- - **Fileru**  
+ - **Fileru**
+ - **Filerio**
  - **Filmmodu**  
  - **Gcloud** 
  - **Gphoto**   
