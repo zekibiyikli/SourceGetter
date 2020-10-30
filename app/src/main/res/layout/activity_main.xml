@@ -154,6 +154,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Mp4Upload"
+                    android:onClick="btn_mp4upload"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="MStream"
                     android:onClick="btn_mstream"/>
                 <Button

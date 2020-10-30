@@ -23,7 +23,8 @@ Brings resources from Video Sites
  - **M3U8-Mp4**  
  - **Mediafile**  
  - **Mixdrop**  
- - **Movcloud**  
+ - **Movcloud**
+ - **Mp4Upload**
  - **Mstream**  
  - **Mycima**  
  - **Mymailru**  

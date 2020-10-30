@@ -109,6 +109,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_movcloud(view: View){
         goPlayer("https://movcloud.net/embed/sv-6H4ObIaqQ")
     }
+    fun btn_mp4upload(view: View){
+        goPlayer("https://www.mp4upload.com/embed-ct5j6f6hn1fk.html")
+    }
     fun btn_mstream(view: View){
         goPlayer("https://mstream.xyz/otx38euaqx75")
     }

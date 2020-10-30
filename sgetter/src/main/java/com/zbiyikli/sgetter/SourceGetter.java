@@ -40,6 +40,7 @@ import com.zbiyikli.sgetter.Domains.M3u8;
 import com.zbiyikli.sgetter.Domains.Mediafire;
 import com.zbiyikli.sgetter.Domains.MixDrop;
 import com.zbiyikli.sgetter.Domains.Movcloud;
+import com.zbiyikli.sgetter.Domains.Mp4Upload;
 import com.zbiyikli.sgetter.Domains.MyMailRu;
 import com.zbiyikli.sgetter.Domains.Mycima;
 import com.zbiyikli.sgetter.Domains.Okru;
@@ -270,6 +271,7 @@ public class SourceGetter {
         boolean fansubs=false;
         boolean solidfile=false;
         boolean mediafire=false;
+        boolean mp4Upload=false;
 
         if (check(openload, url)) {
             run = true;
@@ -568,6 +570,9 @@ public class SourceGetter {
         }else if(url.contains("mediafire")){
             mediafire=true;
             run=true;
+        }else if(url.contains("mp4upload")){
+            mp4Upload=true;
+            run=true;
         }
 
         if (run) {
@@ -732,11 +737,15 @@ public class SourceGetter {
                 Solidfile(url);
             }else if(mediafire){
                 Mediafire(url);
+            }else if(mp4Upload){
+                Mp4Upload(url);
             }
             
         }
         return run;
     }
+
+    private void Mp4Upload(String url){new Mp4Upload().execute(url);}
 
     private void Mediafire(String url){new Mediafire().execute(url);}
 
