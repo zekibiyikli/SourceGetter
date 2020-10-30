@@ -27,6 +27,7 @@ import com.zbiyikli.sgetter.Domains.Blogger;
 import com.zbiyikli.sgetter.Domains.ClipWatching;
 import com.zbiyikli.sgetter.Domains.CloudVideo;
 import com.zbiyikli.sgetter.Domains.Cloudb;
+import com.zbiyikli.sgetter.Domains.Cocoscope;
 import com.zbiyikli.sgetter.Domains.ComedyShow;
 import com.zbiyikli.sgetter.Domains.Delivembed;
 import com.zbiyikli.sgetter.Domains.Feelem;
@@ -260,6 +261,7 @@ public class SourceGetter {
         boolean bittube=false;
         boolean streamtape=false;
         boolean vudeo=false;
+        boolean cocoscope=false;
 
         if (check(openload, url)) {
             run = true;
@@ -572,6 +574,9 @@ public class SourceGetter {
         }else if(url.contains("vudeo")){
             vudeo=true;
             run=true;
+        }else if(url.contains("cocoscope")){
+            cocoscope=true;
+            run=true;
         }
 
         if (run) {
@@ -726,11 +731,15 @@ public class SourceGetter {
                 Streamtape(url);
             }else if(vudeo){
                 Vudeo(url);
+            }else if(cocoscope){
+                Cocoscope(url);
             }
             
         }
         return run;
     }
+
+    private void Cocoscope(String url){new Cocoscope().execute(url);}
 
     private void Vudeo(String url){new Vudeo().execute(url);}
 

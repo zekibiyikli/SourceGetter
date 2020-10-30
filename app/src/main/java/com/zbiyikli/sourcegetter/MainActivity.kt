@@ -73,6 +73,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_comedyshow(view: View){
         goPlayer("https://play.comedyshow.to/embedplay/ffd68b7497daa0ca15026a2fe3237257")
     }
+    fun btn_cocoscope(view: View){
+        goPlayer("https://www.cocoscope.com/watch?v=57072")
+    }
     fun btn_dailymotion(view: View){
         goPlayer("https://www.dailymotion.com/embed/video/x3giopp")
     }

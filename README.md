@@ -7,7 +7,8 @@ Brings resources from Video Sites
  - **Blogger**  
  - **Clipwatching**  
  - **Cloudb**  
- - **Clouvideo**  
+ - **Clouvideo**
+ - **Cocoscope**
  - **Comedyshow**  
  - **Dailymotion**  
  - **Delivembed**  

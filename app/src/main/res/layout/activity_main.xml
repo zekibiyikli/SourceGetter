@@ -89,6 +89,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Cocoscope"
+                    android:onClick="btn_cocoscope"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="ComedyShow"
                     android:onClick="btn_comedyshow"/>
                 <Button
