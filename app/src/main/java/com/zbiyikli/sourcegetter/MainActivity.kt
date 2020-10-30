@@ -82,6 +82,9 @@ class MainActivity : AppCompatActivity() {
     fun btn_delivembed(view: View){
         goPlayer("https://api1571795485.delivembed.cc/embed/kp/1045457")
     }
+    fun btn_fansubs(view: View){
+        goPlayer("http://fansubs.tv/v/qLS5z7")
+    }
     fun btn_feelem(view: View){
         goPlayer("https://feelem.org/95240")
     }

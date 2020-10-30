@@ -11,7 +11,8 @@ Brings resources from Video Sites
  - **Cocoscope**
  - **Comedyshow**  
  - **Dailymotion**  
- - **Delivembed**  
+ - **Delivembed**
+ - **Fansubs**
  - **Feelem**  
  - **Fileru**
  - **Filerio**

@@ -33,6 +33,7 @@ import com.zbiyikli.sgetter.Domains.Delivembed;
 import com.zbiyikli.sgetter.Domains.Feelem;
 import com.zbiyikli.sgetter.Domains.Filerio;
 import com.zbiyikli.sgetter.Domains.FilmModu;
+import com.zbiyikli.sgetter.Domains.Fansubs;
 import com.zbiyikli.sgetter.Domains.GCloud;
 import com.zbiyikli.sgetter.Domains.Imdb;
 import com.zbiyikli.sgetter.Domains.M3u8;
@@ -264,6 +265,7 @@ public class SourceGetter {
         boolean vudeo=false;
         boolean cocoscope=false;
         boolean filerio=false;
+        boolean fansubs=false;
 
         if (check(openload, url)) {
             run = true;
@@ -335,10 +337,6 @@ public class SourceGetter {
         }
         else if (check(uptostream, url)) {
             isuptostream=true;
-            run = true;
-        }
-        else if (check(fansubs,url)){
-            isFanSubs = true;
             run = true;
         }
         else if (url.contains("dailymotion")){
@@ -564,6 +562,9 @@ public class SourceGetter {
         }else if(url.contains("filerio")){
             filerio=true;
             run=true;
+        }else if(url.contains("fansubs")){
+            fansubs=true;
+            run=true;
         }
 
         if (run) {
@@ -722,11 +723,15 @@ public class SourceGetter {
                 Cocoscope(url);
             }else if(filerio){
                 Filerio(url);
+            }else if(fansubs){
+                Fansubs(url);
             }
             
         }
         return run;
     }
+
+    private void Fansubs(String url){new Fansubs().execute(url);}
 
     private void Filerio(String url){new Filerio().execute(url);}
 

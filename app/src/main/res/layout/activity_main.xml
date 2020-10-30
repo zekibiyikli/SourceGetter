@@ -109,6 +109,11 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:text="Fansubs"
+                    android:onClick="btn_fansubs"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:text="Feelem"
                     android:onClick="btn_feelem"/>
                 <Button
